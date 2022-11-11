@@ -43,7 +43,7 @@
             android:layout_margin="15dp"
             android:fontFamily="@font/monserat"
             android:gravity="center"
-            android:text="Koneksi Gagal"
+            android:text="Koneksi  Gagal"
             android:textSize="20dp"
             android:textColor="#6C6C6C"
             android:textStyle="bold" />
