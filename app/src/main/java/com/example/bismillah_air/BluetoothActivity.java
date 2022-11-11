@@ -1,21 +1,15 @@
 package com.example.bismillah_air;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
-import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
@@ -33,9 +27,6 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.bismillah_air.Utility.NetworkChangeListener;
-import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,11 +52,6 @@ public class BluetoothActivity extends AppCompatActivity {
     private static final String TAG = "BlueTest5-MainActivity";
 
 //    private View decorView;
-
-//    sefdanny
-    NetworkChangeListener networkChangeListener = new NetworkChangeListener();
-    private ActionBarDrawerToggle t;
-    private NavigationView nv;
 
 
     @Override
@@ -136,7 +122,7 @@ public class BluetoothActivity extends AppCompatActivity {
             public void onClick(View arg0) {
 
                 if (mBTAdapter == null) {
-                    Toast.makeText(BluetoothActivity.this, "Silahkan Pilih Motor...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(BluetoothActivity.this, "Silahkan Pilih Device...", Toast.LENGTH_SHORT).show();
                 } else {
                     BluetoothDevice device = ((MyAdapter) (listView.getAdapter())).getSelectedItem();
                     Intent intent = new Intent(getApplicationContext(), WifiActivity.class);
@@ -149,48 +135,6 @@ public class BluetoothActivity extends AppCompatActivity {
             }
         });
 
-
-        final DrawerLayout drawerlayout = findViewById(R.id.drawerlayout);
-
-        findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawerlayout.openDrawer(GravityCompat.START);
-            }
-        });
-
-//        ChangeActivity
-        t = new ActionBarDrawerToggle(this, drawerlayout, R.string.app_name, R.string.app_name);
-        t.syncState();
-
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        nv = (NavigationView)findViewById(R.id.NavigationView);
-        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-                switch(id)
-                {
-                    case R.id.home:
-                        Intent mtintent1 = new Intent(BluetoothActivity.this, MainActivity.class);
-                        startActivity(mtintent1);
-                        return true;
-                    case R.id.wifi:
-                        Intent mtintent = new Intent(BluetoothActivity.this, WifiActivity.class);
-                        startActivity(mtintent);
-                        return true;
-                    default:
-                        return true;
-                }
-
-
-
-
-            }
-
-        });
-//        end changeactivity
 
 
     }
@@ -220,7 +164,6 @@ public class BluetoothActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
 // TODO Auto-generated method stub
-        unregisterReceiver(networkChangeListener);
         super.onStop();
     }
 
@@ -426,13 +369,4 @@ public class BluetoothActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-    @Override
-    protected void onStart() {
-        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
-        registerReceiver(networkChangeListener, filter);
-        super.onStart();
-    }
-
-
 }

@@ -12,12 +12,12 @@ import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.bismillah_air.Utility.NetworkChangeListener;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
 
     NetworkChangeListener networkChangeListener = new NetworkChangeListener();
     private ActionBarDrawerToggle t;
@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         final DrawerLayout drawerlayout = findViewById(R.id.drawerlayout);
 
         findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
