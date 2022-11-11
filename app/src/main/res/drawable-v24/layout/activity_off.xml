@@ -1,0 +1,192 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="#fff"
+    android:layout_gravity="center"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="335dp"
+        android:layout_height="340dp"
+        android:background="@drawable/bg_bluetooth"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="845dp"
+        android:layout_height="500dp"
+        android:src="@drawable/ilussof"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/popup"
+        android:layout_marginTop="-140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:fontFamily="@font/maven"
+        android:text="Checkout"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.335">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/end"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/buttonbiru"
+        android:fontFamily="@font/monserat"
+        android:text="Selesai"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885">
+
+    </Button>
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="-158dp"
+        android:background="@drawable/greendown3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.700"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="-150dp"
+        android:text="Sisa Saldo"
+        android:fontFamily="@font/semibold"
+        android:textSize="13dp"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tagihan"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/monserat"
+        android:text="Rp75.000"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:layout_marginLeft="-150dp"
+        android:layout_marginTop="145dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="158dp"
+        android:background="@drawable/greendown2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.700"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="170dp"
+        android:text="Jarak"
+        android:fontFamily="@font/semibold"
+        android:textSize="13dp"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/jarak"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/monserat"
+        android:text="40"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="145dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/monserat"
+        android:text="m"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="145dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

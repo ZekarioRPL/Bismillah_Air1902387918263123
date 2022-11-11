@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#fff">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:src="@drawable/ilustrationwelcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <TextView
+        android:layout_width="550dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="-45dp"
+        android:fontFamily="@font/maven"
+        android:text="Selamat Datang!"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="-200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.876"
+        android:background="@drawable/buttonpink"
+        android:text="Scan"
+        android:textAllCaps="false"
+        android:fontFamily="@font/monserat"
+        android:textSize="17dp"
+        android:textColor="#fff">
+    </Button>
+
+    <TextView
+        android:id="@+id/percobaan"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="90dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/monserat"
+        android:text="Mari kita mulai perjalanan yang menyerukan di hari ini bersama Etho. Scan kartu QR mu!"
+        android:textColor="#ea3e3e"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
