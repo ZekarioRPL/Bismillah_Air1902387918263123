@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="#C2EF8D">
+    android:background="@drawable/popup">
 
     <!--    <ImageView-->
     <!--        android:layout_width="150dp"-->
@@ -32,42 +32,48 @@
             android:id="@+id/imageView"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             app:srcCompat="@drawable/ic_baseline_wifi_24"
-            app:tint="@color/teal_200" />
+            app:tint="#8BC34A" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="sans-serif-condensed-light"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/monserat"
             android:gravity="center"
             android:text="Koneksi Gagal"
             android:textSize="20dp"
+            android:textColor="#6C6C6C"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-medium"
+            android:fontFamily="@font/semibold"
             android:gravity="center"
             android:text="Internet tidak terdeteksi"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-medium"
+            android:fontFamily="@font/semibold"
             android:gravity="center"
             android:text="Silakan Periksa Koneksi Internet"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/btnRetry"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="25dp"
-            android:text="COba Kembali" />
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_margin="40dp"
+            android:background="@drawable/butn"
+            android:fontFamily="@font/monserat"
+            android:text="Coba Kembali"
+            android:textAllCaps="false"
+            android:textColor="#8BC34A" />
 
     </LinearLayout>
 
