@@ -28,6 +28,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.bismillah_air.Utility.NetworkChangeListener;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -52,7 +54,7 @@ public class BluetoothActivity extends AppCompatActivity {
     private static final String TAG = "BlueTest5-MainActivity";
 
 //    private View decorView;
-
+    NetworkChangeListener networkChangeListener = new NetworkChangeListener();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
