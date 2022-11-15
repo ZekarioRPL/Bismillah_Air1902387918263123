@@ -123,6 +123,7 @@
                     app:layout_constraintVertical_bias="0.2" />
 
                 <TextView
+                    android:id="@+id/sebelum_filter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/monserat"
@@ -190,6 +191,7 @@
                     app:layout_constraintVertical_bias="0.2" />
 
                 <TextView
+                    android:id="@+id/setelah_filter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/monserat"
