@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle t;
     private NavigationView nv;
     TextView setelah_filter, sebelum_filter;
-    Handler handler;
-    Runnable runnable;
+    public Handler handler;
+    public Runnable runnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,11 +65,31 @@ public class MainActivity extends AppCompatActivity {
                 int id = item.getItemId();
                 switch(id)
                 {
+
                     case R.id.home:
                         return true;
                     case R.id.information:
-//                        Intent mtintent = new Intent(MainActivity.this, BluetoothActivity.class);
-//                        startActivity(mtintent);
+
+                        Handler handler1 = new Handler();
+                        Runnable runnable1 = new Runnable() {
+                            public void run() {
+                                Intent mtintent = new Intent(MainActivity.this, InformationActivity.class);
+                                startActivity(mtintent);
+                            }
+                        };
+                        handler1.postDelayed(runnable1, 1000);
+                        return true;
+                    case R.id.history:
+
+                        Handler handler2 = new Handler();
+                        Runnable runnable2 = new Runnable() {
+                            public void run() {
+                                Intent mtintent1 = new Intent(MainActivity.this, HistoryActivity.class);
+                                startActivity(mtintent1);
+                            }
+                        };
+                        handler2.postDelayed(runnable2, 1000);
+                        return true;
                     default:
                         return true;
                 }
@@ -124,8 +144,12 @@ public class MainActivity extends AppCompatActivity {
 //                    return;
                 }
                 Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
-                setelah_filter.setText(response.body().getData().getDebuAfterFilter().toString());
-                sebelum_filter.setText(response.body().getData().getDebuBeforeFilter().toString());
+                if (response.body()!= null) {
+                        setelah_filter.setText(response.body().getData().getDebuAfterFilter().toString());
+                        sebelum_filter.setText(response.body().getData().getDebuBeforeFilter().toString());
+                }
+
+
             }
 
             @Override
@@ -137,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onStart() {
+
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(networkChangeListener, filter);
         super.onStart();
