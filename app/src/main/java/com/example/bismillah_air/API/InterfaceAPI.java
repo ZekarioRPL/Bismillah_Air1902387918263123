@@ -6,7 +6,7 @@ import retrofit2.http.Path;
 
 public interface InterfaceAPI {
 
-    String BASE_URL = "https://dfa8-125-166-3-4.ngrok.io/api/";
+    String BASE_URL = "https://9be2-36-91-58-207.ngrok.io/api/";
 
     @GET("send-mesin/{id}")
     Call<Respon> rp(@Path("id") String id);

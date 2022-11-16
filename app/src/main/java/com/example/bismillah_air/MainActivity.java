@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     NetworkChangeListener networkChangeListener = new NetworkChangeListener();
-
+    private ActionBarDrawerToggle t;
+    private NavigationView nv;
     TextView setelah_filter, sebelum_filter;
     Handler handler;
     Runnable runnable;
@@ -43,7 +44,42 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         final DrawerLayout drawerlayout = findViewById(R.id.drawerlayout);
+
+        findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerlayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+//        ChangeActivity
+        t = new ActionBarDrawerToggle(this, drawerlayout, R.string.app_name, R.string.app_name);
+        t.syncState();
+
+        nv = (NavigationView)findViewById(R.id.NavigationView);
+        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                switch(id)
+                {
+                    case R.id.home:
+                        return true;
+                    case R.id.information:
+//                        Intent mtintent = new Intent(MainActivity.this, BluetoothActivity.class);
+//                        startActivity(mtintent);
+                    default:
+                        return true;
+                }
+
+
+
+
+            }
+
+        });
 
         setelah_filter = findViewById(R.id.setelah_filter);
         sebelum_filter = findViewById(R.id.sebelum_filter);
@@ -87,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 //                    Toast.makeText(MainActivity.this, "gagal", Toast.LENGTH_SHORT).show();
 //                    return;
                 }
-//                Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
                 setelah_filter.setText(response.body().getData().getDebuAfterFilter().toString());
                 sebelum_filter.setText(response.body().getData().getDebuBeforeFilter().toString());
             }
@@ -109,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         unregisterReceiver(networkChangeListener);
-        handler.removeCallbacks(runnable);
+//        handler.removeCallbacks(runnable);
         super.onStop();
     }
 
